@@ -37,12 +37,15 @@ body {
 .display {
     position: relative;
     width: 80%;
-    height: 80px;
+    height: 30px;
     margin-bottom: 10px
 }
 
 .display #result {
-    font-size: 2em
+	font-size: 2em;
+	width: 100%;
+	background: transparent;
+	border: none;
 }
 
 .buttons {
@@ -74,7 +77,9 @@ body {
 }
 
 #clear {
-    background: #FF8A65
+	background: #FF8A65;
+	width: 125px;
+	text-align: center;
 }
 
 .dark_mode_btn {
@@ -120,12 +125,12 @@ body {
     <div class="container-fluid mt-5 h-100">
         <div class="row justify-content-center align-items-center h-100">
             <div class="main">
-                <div class="display"> <button class="dark_mode_btn"><i class="fa fa-moon-o" aria-hidden="true"></i></button>
-                    <p id="history"><i class="fa fa-history" aria-hidden="true"></i>&nbsp;History</p>
+                <div class="display"> <button class="dark_mode_btn"></button>
+                    <p id="history"></p>
                     <!-- <h2 id="result"></h2> -->
                     <input type="text" id="result" />
                 </div>
-                <div class="buttons"> <input type="text" id="clear" value="C" onclick="cls()" /> <button id="delete_single_num"><i class="fa fa-scissors" aria-hidden="true"></i></button> <button id="Normal_btn">/</button> <button id="Normal_btn">*</button> </div>
+                <div class="buttons"> <input type="text" id="clear" value="C" onclick="cls()" />  <button id="Normal_btn" onclick="dis('/')" value="/">/</button> <button id="Normal_btn" onclick="dis('*')" value="*">*</button> </div>
                 <div class="buttons"> <input type="text" id="Normal_btn" onclick="dis('7')" value="7" /> <button id="Normal_btn" onclick="dis('8')" value="8">8</button> <button id="Normal_btn" onclick="dis('9')" value="9">9</button> <button id="Normal_btn"  onclick="dis('-')">-</button> </div>
                 <div class="buttons"> <button id="Normal_btn" onclick="dis('4')" value="4">4</button> <button id="Normal_btn" onclick="dis('5')" value="5">5</button> <button id="Normal_btn" onclick="dis('6')" value="6">6</button> <button id="Normal_btn" onclick="dis('+')">+</button> </div>
                 <div class="buttons"> <button id="Normal_btn" onclick="dis('1')" value="1">1</button> <button id="Normal_btn" onclick="dis('2')" value="2">2</button> <button id="Normal_btn" onclick="dis('3')" value="3">3</button> <button id="Normal_btn" onclick="dis('.')">.</button> </div>
